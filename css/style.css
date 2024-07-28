@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: monospace, 'Courier New', Courier;
+}
+:root {
+    --bg-color: #ececec; /* background color */
+    --second-bg-color: #131313;
+    --text-color: white; /* text color */
+    --main-color: #ffdf50;
+    /*--main-color: #00ffee;*/
+}
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    /***/
+    padding-top: 80px;
+    /**/
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*padding: 4rem 12% 4rem;*/
+    padding: 2rem 3%;
+    background: rgb(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    /**/
+    height: 80px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Hafif bir gölge */
+    /**/
+}
+.logo {
+    font-size: 3.2rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+.logo span {
+    text-shadow: 0 0 25px var(--main-color);
+}
+.navbar a {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-left: 1.2rem; /* distance from left*/
+    font-weight: 500;
+    /*transition: 0.3s ease;*/
+    /*transition: ease; /* ???*/
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 3px solid transparent;
+    letter-spacing: 0.1rem;
+}
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color); /* underlined */
+}
+
+
+
+.btn {
+    width:140px;;
+}
+.dropdown-menu li {
+    position: relative;
+}
+.dropdown-menu .dropdown-submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: -7px;
+}
+.dropdown-menu .dropdown-submenu-left {
+    right: 100%;
+    left: auto;
+}
+.dropdown-menu > li:hover > .dropdown-submenu {
+    display: block;
+}
