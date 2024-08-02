@@ -9,11 +9,11 @@
     font-family: monospace, 'Courier New', Courier;
 }
 :root {
-    --bg-color: #ececec; /* background color */
-    --second-bg-color: #131313;
-    --text-color: white; /* text color */
-    --main-color: #ffdf50;
-    /*--main-color: #00ffee;*/
+    --bg-color: #f8f8f8;
+    --second-bg-color: #ffffff;
+    --text-color: #000;
+    --second-text-color: #ffffff;
+    --hover-text-color: #b9b9b9;
 }
 
 html {
@@ -23,16 +23,13 @@ html {
 body {
     background: var(--bg-color);
     color: var(--text-color);
-    /***/
     padding-top: 80px;
-    /**/
 }
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    /*padding: 4rem 12% 4rem;*/
     padding: 2rem 3%;
     background: rgb(0, 0, 0, 0.7);
     backdrop-filter: blur(10px);
@@ -40,17 +37,18 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 5;
-    /**/
     height: 80px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Hafif bir gölge */
-    /**/
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+/*----------------- Logo Start -----------------*/
 .logo {
-    font-size: 3.2rem;
-    color: var(--text-color);
-    font-weight: 800;
+    width: 8rem;
     cursor: pointer;
     transition: transform 0.3s ease;
+    display: flex;
+    position: absolute;
+    padding-left: 20px;
 }
 .logo:hover {
     transform: scale(1.1);
@@ -58,13 +56,66 @@ body {
 .logo span {
     text-shadow: 0 0 25px var(--main-color);
 }
+/*----------------- Logo End -----------------*/
+
+/*----------------- Sidebar Start -----------------*/
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--second-bg-color);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: flex;
+    transition: 0.3s;
+    position:relative;
+}
+.sidebar a:hover {
+    color: var(--hover-text-color);
+}
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 36px;
+    font-size: 36px;
+}
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 10px 15px;
+    border: none;
+}
+.openbtn:hover {
+    color: var(--hover-text-color);
+}
+#main {
+    transition: margin-left .5s;
+    padding: 36px;
+}
+/*----------------- Sidebar End -----------------*/
+
+
+
+
+
+/*
 .navbar a {
     font-size: 1.6rem;
     color: var(--text-color);
-    margin-left: 1.2rem; /* distance from left*/
+    margin-left: 1.2rem;
     font-weight: 500;
-    /*transition: 0.3s ease;*/
-    /*transition: ease; /* ???*/
     transition: color 0.3s ease, border-bottom 0.3s ease;
     border-bottom: 3px solid transparent;
     letter-spacing: 0.1rem;
@@ -72,8 +123,12 @@ body {
 .navbar a:hover,
 .navbar a.active {
     color: var(--main-color);
-    border-bottom: 3px solid var(--main-color); /* underlined */
+    border-bottom: 3px solid var(--main-color);
 }
+*/
+
+
+
 
 
 
