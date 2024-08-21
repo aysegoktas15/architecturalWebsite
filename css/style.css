@@ -119,6 +119,15 @@ p#main {
     left: 0.4rem;
 }
 
+.dropdown-menu.menu-item {
+    display: flexbox;
+    position: absolute;
+    border: 0.1rem solid var(--text-color); 
+    border-radius: 5px;
+    width: 30rem;
+    padding-left: 1rem;
+}
+
 .dropdown-menu .dropdown-submenu {
     display: none;
     position: absolute;
